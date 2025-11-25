@@ -1,0 +1,15 @@
+.root-wrapper {
+    /* border: 2px white solid; */
+    --bg-url: url('https://i.postimg.cc/fbhw6hzJ/bg-home-2.png'); /* default bg; made a variable so we can access/change in js */
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.root-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg-url) center no-repeat;
+    background-size: cover;
+}

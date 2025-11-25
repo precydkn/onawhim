@@ -1,0 +1,72 @@
+.user-info-container {
+    /* border: 1px dashed green; */
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.user-info-container button {
+    font-family: "VT323", monospace;
+    font-size: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2.5px solid #24371B;
+    color: #24371B;
+    padding: 5px 10px;
+}
+.user-info-container button:hover {
+    cursor: pointer;
+    background-color: #24371B;
+    color: #7B846B;
+}
+
+.user-info-container .btns-container {
+    display: flex;
+    gap: 10px;
+    margin-top: -20px;
+}
+
+.user-gif {
+    /* border: 1px dashed yellow; */
+    width: 100px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+.user-gif img {
+    width: 100%;
+    mix-blend-mode: overlay;
+}
+
+.delete-acc-popup {
+    background-color: #24371B;
+    color: #7B846B;
+    margin: 0 20px;
+    padding: 10px 20px 20px;
+    position: absolute;
+    top: 87px;
+    font-size: 24px;
+}
+
+/* ---Popup confirmation btns--- */
+.delete-acc-popup .confirm-btns {
+    margin-top: 30px;
+}
+.delete-acc-popup .confirm-btns button {
+    font-family: "VT323", monospace;
+    font-size: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #7B846B;
+    color: #7B846B;
+    /* width: 60px; */
+    margin: 0 5px;
+
+}
+.delete-acc-popup .confirm-btns button:hover {
+    cursor: pointer;
+    background-color: #7B846B;
+    color: #24371B;
+}

@@ -1,0 +1,101 @@
+.Home {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gamecard-acc, .gamecard-oaw {
+    position: absolute;
+    width: 500px;
+    height: max-content;
+    transition: width 0.2s;
+}
+.gamecard-acc img, .gamecard-oaw img {
+    width: 100%;
+}
+.gamecard-acc:hover, .gamecard-oaw:hover {
+    width: 650px;
+}
+
+@media (orientation: landscape) {
+    .gamecard-acc {
+        top: 600px;
+    }
+    .gamecard-acc:hover {
+        top: 500px;
+    }
+    
+    .gamecard-oaw {
+        top: 150px;
+        right: 50px;
+    }
+    .gamecard-oaw:hover {
+        top: 120px;
+        right: 20px;
+    }
+}
+
+@media (orientation: portrait) {
+    .Home .main-wrapper {
+        transform: translate(-50%, calc(-50% + (var(--y-shift) * var(--base-scale)))) scale(calc(var(--base-scale) * var(--zoom)));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    .Home .main-wrapper::before {
+        background-size: cover;
+    }
+
+    .gamecard-acc,
+    .gamecard-oaw {
+        display: none;
+    }
+
+    .gamecards-mobile-container {
+        background-color: #262626;
+        border-radius: 50px;
+        /* margin: 0 auto; */
+        /* margin-top: -300px; */
+        /* width: 1500px; */
+        /* height: 1000px; */
+        width: 1500px;
+        height: 2000px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .close-gcMobile-btn {
+        font-size: 200px;
+        color: gray;
+        position: absolute;
+        top: 0;
+        right: 300px;
+    }
+
+    .gamecards-mobile-container .gamecard-acc.mobile,
+    .gamecards-mobile-container .gamecard-oaw.mobile {
+        display: block;
+        position: relative;
+        width: 900px;
+    }
+    .gamecards-mobile-container .gamecard-acc.mobile:hover,
+    .gamecards-mobile-container .gamecard-oaw.mobile:hover {
+        width: 1200px;
+    }
+    
+    .startbtn {
+        /* border: 3px solid red; */
+        width: 320px;
+        height: 120px;
+        position: absolute;
+        inset: auto 800px 220px;
+    }
+
+    .close-gcMobile-btn,
+    .startbtn {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,35 @@
+.ReturnBtn {
+    position: absolute;
+}
+
+/*---Home btn---*/
+.home-btn {
+    right: 0;
+    bottom: -145px;
+}
+.home-btn img {
+    width: 180px;
+    transform: rotate(7.7deg);
+    mix-blend-mode: difference;
+}
+
+/*---Back btn---*/
+.back-btn {
+    top: 510px;
+}
+.back-btn img {
+    width: 190px;
+    transform: rotate(-8deg);
+    mix-blend-mode: multiply;
+}
+
+/*---Generate act btn---*/
+.to-gen-btn {
+    top: 370px;
+    left: 40px;
+}
+.to-gen-btn img {
+    width: 150px;
+    transform: rotate(5deg);
+    mix-blend-mode: multiply;
+}

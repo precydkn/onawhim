@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "Pixelout";
+    src: url("../css/fonts/Pixelout Personal Use Only.ttf");
+}
+@font-face {
+    font-family: "Daydream";
+    src: url("../css/fonts/Daydream-DEMO.otf");
+}
+
+.screen {
+    /* border: 2px dashed red; */
+    position: absolute;
+    width: 404px;
+    height: 360px;
+    top: 128px;
+    left: 758px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.screen .h h1 {
+    font-family: 'Pixelout';
+    font-size: 60px;
+    margin-top: 40px;
+}
+
+.screen .h h2 {
+    font-family: 'Daydream';
+    font-size: 30px;
+    margin: -20px 45px 5px 0;
+    text-align: right;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #24371B;
+}
+
+.screen h3 {
+    font-family: "Darumadrop One", sans-serif;
+    font-size: 40px;
+    margin: 20px 0 0;
+}
+
+.screen p {
+    margin: 14px 0;
+}
+
+.Start .nav {
+    margin-top: 40px;
+}
+.User .nav {
+    margin-top: 20px;
+}
+
+.About .catgif {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+.About .catgif img {
+    width: 100px;
+    mix-blend-mode: multiply;
+}
+
+.Generate .back-btn,
+.About .back-btn,
+.LoginSignup .back-btn,
+.Account .back-btn {
+    top: 380px;
+    right: 0;
+}
+
+
+@media (orientation: portrait) {
+    .screen {
+        /* border: 3px dashed orange; */
+        top: 547px;
+    }
+}

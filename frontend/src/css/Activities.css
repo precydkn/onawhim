@@ -1,0 +1,124 @@
+.screen .Activities h3 {
+    margin-top: 10px;
+}
+
+/* ---Activities container--- */
+.activities-container {
+    text-align: left;
+    overflow-y: auto;
+    margin-top: 5px;
+    height: 255px;
+}
+.activities-container .no-acts-text {
+    text-align: center;
+    opacity: 0.7;
+}
+
+/* ---List items--- */
+.activities-container ul {
+    margin: 0;
+    padding: 0;
+}
+.activities-container li {
+    list-style-type: none;
+    margin-left: 15px;
+    display: flex;
+    align-items: baseline;
+}
+
+/* ---Checkbox--- */
+.activities-container li input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; /* for Safari */
+    -moz-appearance: none; /* for Firefox */
+    min-width: 16px;
+    height: 16px;
+    border: 2px solid #24371B;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.activities-container li input[type="checkbox"]:checked {
+    background-color: #24371B;
+}
+.activities-container li input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: #7B846B;
+    font-size: 14px;
+    position: absolute;
+    top: -3px;
+    left: 1px;
+}
+
+/* ---Done activity--- */
+.activities-container li input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* ---Delete btn--- */
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: #24371B;
+    margin-left: 3px;
+    visibility: hidden;
+}
+.delete-btn:hover {
+    cursor: pointer;
+}
+.activities-container li:hover .delete-btn {
+    visibility: visible;
+}
+
+/* ---Scrollbar when acts overflow--- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    border: 2px solid #24371B;
+}
+::-webkit-scrollbar-thumb {
+    background: #24371B;
+    border: 2px solid #24371B;
+}
+
+.Activities .back-btn {
+    top: 380px;
+    right: 0;
+}
+
+/* ---Delete confirmation popup--- */
+.delete-confirmation-container {
+    background-color: #24371B;
+    color: #7B846B;
+    margin: 0 20px;
+    padding: 10px 20px 20px;
+    position: absolute;
+    top: 130px;
+    font-size: 24px;
+}
+
+/* ---Confirmation btns--- */
+.delete-confirmation-container .confirm-btns {
+    margin-top: 30px;
+}
+.delete-confirmation-container .confirm-btns button {
+    font-family: "VT323", monospace;
+    font-size: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid #7B846B;
+    color: #7B846B;
+    width: 60px;
+    margin: 0 5px;
+
+}
+.delete-confirmation-container .confirm-btns button:hover {
+    cursor: pointer;
+    background-color: #7B846B;
+    color: #24371B;
+}

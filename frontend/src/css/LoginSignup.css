@@ -1,0 +1,125 @@
+.form-container {
+    margin-top: 20px;
+}
+
+.form-container #loginForm, 
+.form-container #signupForm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.form-container p {
+    font-size: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+/*---btns & inputs common styles---*/
+.form-container .link-btn,
+.form-container #loginForm input, 
+.form-container #loginForm button, 
+.form-container #signupForm input, 
+.form-container #signupForm button {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    background-color: transparent;
+}
+.form-container #loginForm input, 
+.form-container #loginForm button, 
+.form-container #signupForm input, 
+.form-container #signupForm button {
+    border-radius: 5px;
+    border: 2px solid #24371B;
+    color: #24371B;
+    margin: 5px;
+}
+.form-container #loginForm button:hover, 
+.form-container #signupForm button:hover {
+    cursor: pointer;
+    background-color: #24371B;
+    color: #7B846B;
+}
+
+/*---input---*/
+.form-container #loginForm input, 
+.form-container #signupForm input {
+    padding: 7px;
+}
+.form-container #loginForm input::-moz-placeholder, 
+.form-container #signupForm input::-moz-placeholder {
+    color: #24371B;
+}
+.form-container #loginForm input::placeholder, 
+.form-container #signupForm input::placeholder {
+    color: #24371B;
+}
+.form-container #loginForm input:focus, 
+.form-container #signupForm input:focus {
+    background-color: #24371B;
+    color: #7B846B;
+    outline: none;
+}
+.form-container #loginForm input:is(:-webkit-autofill, :-webkit-autofill), 
+.form-container #signupForm input:is(:-webkit-autofill, :-webkit-autofill) {
+    color: #24371B;
+}
+.form-container #loginForm input:is(:-webkit-autofill, :autofill), 
+.form-container #signupForm input:is(:-webkit-autofill, :autofill) {
+    color: #24371B;
+}
+/*---*/
+
+/*---input, textarea, select autofill styles*/
+.form-container input:-webkit-autofill:hover,
+.form-container input:-webkit-autofill:focus,
+.form-container textarea:-webkit-autofill:hover,
+.form-container textarea:-webkit-autofill:focus,
+.form-container select:-webkit-autofill:hover,
+.form-container select:-webkit-autofill:focus {
+    font-family: "VT323", monospace;
+    -webkit-text-fill-color: #7B846B;
+    -webkit-box-shadow: 0 0 0px 1000px #24371B inset;
+}
+.form-container input:-webkit-autofill, 
+.form-container textarea:-webkit-autofill, 
+.form-container select:-webkit-autofill {
+    -webkit-text-fill-color: #24371B;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(123, 132, 107) inset;
+    background-color: transparent;
+}
+
+/*---show password btn---*/
+.form-container #loginForm .show-password-btn,
+.form-container #signupForm .show-password-btn {
+    position: absolute;
+    right: 0;
+    top: 205px;
+    border: none;
+}
+.form-container #loginForm .show-password-btn:hover,
+.form-container #signupForm .show-password-btn:hover {
+    background-color: transparent;
+}
+
+/*---toggle btn---*/
+.form-container .link-btn {
+    border: 0;
+    color: transparent;
+    -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color: #24371B;
+}
+.form-container .link-btn:hover {
+    color:#24371B;
+    -webkit-text-stroke-width: 0;
+    cursor: pointer;
+}
+
+/* message */
+.form-container #errorMessage {
+    font-size: 16px;
+    color: #7B846B;
+    background-color: #24371B;
+    display: inline-block;
+    padding: 0 4px;
+}

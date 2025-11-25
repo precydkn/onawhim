@@ -1,0 +1,21 @@
+.ActivitiesFilter {
+    display: flex;
+    margin: 5px 20px;
+    font-size: 22px;
+    border: 2px solid #24371B;
+    cursor: pointer;
+}
+
+.ActivitiesFilter p {
+    -webkit-text-stroke-width: 0.7px;
+    margin: 0;
+}
+
+.ActivitiesFilter div {
+    width: 100%;
+}
+.ActivitiesFilter div:hover, div.current-filter {
+    background-color: #24371B;
+    color: #7B846B;
+    -webkit-text-stroke-color: #24371B;
+}

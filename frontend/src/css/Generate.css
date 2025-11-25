@@ -1,0 +1,141 @@
+.screen .Generate {
+    /* border: 1px dashed gray; */
+    width: 404px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---Selection Screen---*/
+.act-types {
+    /* border: 1px dashed lightgray; */
+    margin-top: 15px;
+    margin-left: 40px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+
+    color: transparent;
+    -webkit-text-stroke: #24371B;
+    -webkit-text-stroke-width: 1px;
+    font-size: 30px;
+}
+.ltypes, 
+.rtypes {
+    /* border: 1px dashed lightgreen; */
+    width: max-content;
+
+}
+.ltypes div, 
+.rtypes div {
+    /* border: 1px dashed lightgreen; */
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+
+}
+.ltypes img, 
+.rtypes img {
+    height: 50px;
+    margin-top: 5px;
+    visibility: hidden;
+    mix-blend-mode: darken;
+}
+
+.ltypes div:hover, 
+.rtypes div:hover, 
+.typeselected {
+    cursor: pointer;
+    color: #24371B;
+    -webkit-text-stroke-width: 0;
+}
+
+.ltypes div:hover img,
+.rtypes div:hover img,
+.typeselected img {
+    visibility: visible;
+}
+
+.getbtn {
+    font-family: "Darumadrop One", sans-serif;
+    cursor: pointer;
+}
+.getbtn,
+.getbtn p {
+    display: inline-block;
+}
+.getbtn p {
+    border: 3px solid #24371B;
+    border-radius: 5px;
+    padding: 0 10px 5px;
+}
+.getbtn p:hover {
+    background-color: #24371B;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #7B846B;
+}
+
+.warningMsg {
+    position: absolute;
+    right: 10px;
+    bottom: 110px;
+    transform: rotate(-9deg);
+    font-size: 20px;
+    background-color: #24371B;
+    color: #7B846B;
+}
+.warningMsg p {
+    margin: 3px 7px;
+}
+/*---*/
+
+/*---Loading Screen---*/
+.loading-screen img {
+    width: 150px;
+    margin-bottom: -40px;
+    mix-blend-mode: darken;
+}
+/*---*/
+
+/*---Display Activity Screen---*/
+.activity-type {
+    position: absolute;
+    inset: 10px 50px auto;
+}
+.activity-type p {
+    font-size: 22px;
+}
+
+.actbtns {
+    /* border: 1px dashed red; */
+    position: absolute;
+    inset: auto 100px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.actbtns button {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    background-color: transparent;
+    color: #24371B;
+    border-radius: 5px;
+    border: 2px solid #24371B;
+}
+.actbtns button:hover {
+    cursor: pointer;
+    background-color: #24371B;
+    color: #7B846B;
+}
+/*---*/
+
+/* .select-type-screen {
+    display: none;
+}
+.loading-screen {
+    display: none;
+}
+.display-act-screen {
+    display: none;
+} */

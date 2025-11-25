@@ -1,0 +1,54 @@
+.main-wrapper {
+    /* border: 2px lightblue dashed; */
+    --base-scale: 1;
+    --zoom: 1;
+    --y-shift: 0px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1920px;
+    height: 1080px;
+    
+    /*--smoothly change size according to browser size*/
+    transform: translate(-50%, calc(-50% + (var(--y-shift) * var(--base-scale)))) scale(calc(var(--base-scale) * var(--zoom)));
+
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    /*--*/
+}
+.main-wrapper::before {
+    /* border: 2px lightgreen dashed; */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://i.postimg.cc/zv8f0g4B/bg-gameboy.png') center no-repeat;
+    background-size: contain;
+    z-index: -10;
+}
+.main-wrapper.zoomed {
+    --zoom: 1.75;
+    --y-shift: 380px;
+}
+
+@media (orientation: portrait) {
+    .Zoom .main-wrapper {
+        --zoom: 1.7;
+        --y-shift: 400px;
+    }
+    .main-wrapper {
+        /* border: 3px dashed orange; */
+        height: 1920px;
+        transform: translate(-50%, calc(-57% + (var(--y-shift) * var(--base-scale)))) scale(calc(var(--base-scale) * var(--zoom)));
+        /* transform: translate(-50%, -44%) scale(calc(var(--base-scale) * var(--zoom))); */
+    }
+    .main-wrapper.zoomed {
+        --zoom: 3;
+        --y-shift: 950px;
+        /* if .main-wrapper bg-size: cover
+        --zoom: 1.7;
+        --y-shift: 900px;*/
+        /* --zoom: 4;
+        --y-shift: 1250px; */
+    } 
+}

@@ -1,0 +1,26 @@
+.NavBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -30px;
+}
+.NavBtn img {
+    width: 75px;
+    margin-top: 8px;
+    visibility: hidden;
+}
+.NavBtn:hover img {
+    visibility: visible;
+}
+
+.NavBtnLink {
+    font-family: "Darumadrop One", sans-serif;
+    font-size: 50px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #24371B;
+    text-decoration: none;
+}
+.NavBtnLink:hover {
+    color: #24371B;
+    -webkit-text-stroke-width: 0;
+}
