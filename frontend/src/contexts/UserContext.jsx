@@ -26,7 +26,7 @@ export const UserProvider = ({ children }) => {
             setUser(userData);
 
             try {
-                const res = await fetch(`http://localhost:3300/activities`, {
+                const res = await fetch(`https://onawhim-backend.onrender.com/activities`, {
                     headers: { 
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${userData.token}`
@@ -61,7 +61,7 @@ export const UserProvider = ({ children }) => {
         localStorage.setItem('user', JSON.stringify(userData));
 
         try {
-            const res = await fetch(`http://localhost:3300/activities`, {
+            const res = await fetch(`https://onawhim-backend.onrender.com/activities`, {
                 headers: { 
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${userData.token}`
@@ -106,7 +106,7 @@ export const UserProvider = ({ children }) => {
         }
 
         try {
-            const res = await fetch(`http://localhost:3300/activities`, {
+            const res = await fetch(`https://onawhim-backend.onrender.com/activities`, {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
@@ -145,7 +145,7 @@ export const UserProvider = ({ children }) => {
         const newStatus = activity.status === "undone" ? "done" : "undone";
 
         try {
-            const res = await fetch(`http://localhost:3300/activities/${id}`, {
+            const res = await fetch(`https://onawhim-backend.onrender.com/activities/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -173,7 +173,7 @@ export const UserProvider = ({ children }) => {
     // func: delete an activity
     const deleteActivity = async (id) => {
         try {
-            const res = await fetch(`http://localhost:3300/activities/${id}`, {
+            const res = await fetch(`https://onawhim-backend.onrender.com/activities/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -202,7 +202,7 @@ export const UserProvider = ({ children }) => {
         if (!user) return;
 
         try {
-            const res = await fetch(`http://localhost:3300/users/${userId}`, {
+            const res = await fetch(`https://onawhim-backend.onrender.com/users/${userId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",

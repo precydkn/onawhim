@@ -1,7 +1,7 @@
 //---login function---
 export const loginUser = async (email, password) => {
     try {
-        const response = await fetch('http://localhost:3300/login', {
+        const response = await fetch('https://onawhim-backend.onrender.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -18,7 +18,7 @@ export const loginUser = async (email, password) => {
 //---signup function---
 export const signupUser = async (email, password) => {
     try {
-        const response = await fetch('http://localhost:3300/users', {
+        const response = await fetch('https://onawhim-backend.onrender.com/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password }),

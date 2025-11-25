@@ -43,7 +43,7 @@ function Generate() {
         setScreen("loading"); // display loading screen
 
         // fetch activity from api
-        fetch(`http://localhost:3300/api/activity?type=${actType}`)
+        fetch(`https://onawhim-backend.onrender.com/api/activity?type=${actType}`)
         .then(res => res.json())
         .then(data => {
             const generatedAct= data[Math.floor(Math.random() * data.length)]?.activity;
